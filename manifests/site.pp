@@ -5,12 +5,5 @@ node 'master.puppet.vm' {
   file { '/root/README':
     ensure => file,
     content => $fqdn,
-    }
-}
-node /^web/ {
-  inclide role::app_server
-}
-
-node /^db/ {
-  inclide role::db_server
+  }
 }
